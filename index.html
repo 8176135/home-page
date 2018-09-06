@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="main_grid">
+    <span class="header1">Interesting links</span>
+    <div class="piece main" style="">
+        <div class="overlay under covered" id="actualContent">
+            <div class="section">
+                <div class="header" style="grid-row: 1/2; grid-column: 1/-1;">
+                    Games
+                </div>
+                <a class="item" href="https://apps.handofcthulhu.com/DodgeThings/">Dodge Things</a>
+                <!--<a class="item" href="https://apps.handofcthulhu.com/HaNightmare/">Hot air nightmare</a>-->
+                <a class="item" href="https://handofcthulhu.itch.io/hot-air-nightmare">Hot air nightmare</a>
+                <!--<a class="item" href="https://apps.handofcthulhu.com/TdMadness/">Tower defense madness</a>-->
+                <a class="item" href="https://handofcthulhu.itch.io/tower-defense-madness">Tower defense madness</a>
+            </div>
+            <div class="section">
+                <div class="header" style=" grid-row: 1/2; grid-column: 1/-1;">
+                    Websites
+                </div>
+                <a class="item" href="https://apps.handofcthulhu.com/U4Lodging/">U4 Lodging</a>
+                <a class="item" href="https://apps.handofcthulhu.com/OrthoDemo/">Orthographic Demo</a>
+                <a class="item" href="https://wan.handofcthulhu.com/">WAN Explained</a>
+                <div class="item"></div>
+            </div>
+        </div>
+        <div class="overlay" id="projectsOverlay">My Projects</div>
+    </div>
+    <div class="piece other_stuff">
+        <a class="other_item" href="https://gogs.handofcthulhu.com/"><img src="CheckeredBoxes.png" alt="">Git Repo Manager</a>
+        <a class="other_item" href="https://apps.handofcthulhu.com/AppKey/secret_item.html"><img src="CheckeredBoxes.png" alt="">Secret Page</a>
+        <a class="other_item" href="https://github.com/hand-of-cthulhu/">
+            <img src="CheckeredBoxes.png" alt="">Github Page</a>
+    </div>
+    <div class="piece" style="background-color: #111;" class="footer"></div>
+</div>
+<script>
+    document.querySelector("#projectsOverlay").addEventListener("click", function (e) {
+        this.classList.add("hidden");
+        setTimeout(() => {
+            this.style.display = "none";
+            document.querySelector("#actualContent").classList.remove("covered")
+        }, 200);
+    });
+</script>
+</body>
+</html>
